@@ -1,0 +1,4 @@
+class GetOrderController < ApplicationController
+  
+
+end
