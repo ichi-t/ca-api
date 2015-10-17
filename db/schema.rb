@@ -11,18 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151017053906) do
+ActiveRecord::Schema.define(version: 0) do
 
-  create_table "orders", force: :cascade do |t|
-    t.string   "orderId"
-    t.time     "orderDateTime"
-    t.string   "orderUserId"
-    t.string   "orderItemId"
-    t.integer  "orderQuantity"
-    t.string   "orderState"
-    t.string   "orderTags"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+  create_table "order", id: false, force: :cascade do |t|
+    t.string   "orderId",       limit: 8
+    t.datetime "orderDateTime"
+    t.string   "orderUserId",   limit: 8
+    t.string   "orderItemId",   limit: 8
+    t.integer  "orderQuantity", limit: 4
+    t.string   "orderState",    limit: 20
+    t.string   "orderTags",     limit: 20
   end
 
 end
